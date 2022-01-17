@@ -145,8 +145,8 @@ for xx in range(54):
         FWHM = pQ3.a2*5.856416015603827e-5*2*np.sqrt(2*math.log(2))
         FWHMQ3.append(FWHM)
         INTSQ3.append(pQ3.a0*FWHM)
-        if i == 11 and xx == 20:
-            pass
+        # if i == 11 and xx == 20:
+        #     pass
             #plt.plot(np.arange(1024), ABBAt)
             #print(A0_Q1)
                 

@@ -373,7 +373,7 @@ Set2_Temp = np.flipud(Temperatures[:, 9:14])
 Off_Slit_Time = np.zeros((11,2))
 New_Temp = np.hstack((Set1_Temp, Off_Slit_Time))
 New_Temp = np.hstack((New_Temp, Set2_Temp))
-New_Temp[New_Temp == 0] = np.nan
+#New_Temp[New_Temp == 0] = np.nan
 
 plt.figure()
 plt.imshow(New_Temp, cmap=cm.coolwarm)
@@ -417,7 +417,7 @@ Set2_TE = np.flipud(T_emission[:, 9:14])
 Off_Slit_Time = np.zeros((11,2))
 New_TE = np.hstack((Set1_TE, Off_Slit_Time))
 New_TE = np.hstack((New_TE, Set2_TE))
-New_TE[New_TE == 0] = np.nan
+#New_TE[New_TE == 0] = np.nan
 
 plt.figure()
 plt.imshow(New_TE*(10**6), cmap='cividis')
