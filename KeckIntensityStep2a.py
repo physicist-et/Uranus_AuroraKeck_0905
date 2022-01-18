@@ -47,11 +47,11 @@ for n in range(224): #We use this list to create a list which holds all the data
     
 ABsubs = len(Keck_Data)//4 #We create this variable to create the ABBA pattern
 
-# for n in range(ABsubs): #This for loop uses the A - B - B + A and adds them into a list Keck_DataABBA before creating a total spectra 
-#     image_dataSUB = ((Keck_Data[s]/60 - Cal_Flats) - (Keck_Data[(s+1)]/60 - Cal_Flats) - (Keck_Data[(s+2)]/60 - Cal_Flats) + (Keck_Data[(s+3)]/60 - Cal_Flats))/4
-#     Keck_DataABBA.append(image_dataSUB)
-#     s += 4
-#     Keck_Data_Total += Keck_DataABBA[n]
+for n in range(ABsubs): #This for loop uses the A - B - B + A and adds them into a list Keck_DataABBA before creating a total spectra 
+    image_dataSUB = ((Keck_Data[s]/60 - Cal_Flats) - (Keck_Data[(s+1)]/60 - Cal_Flats) - (Keck_Data[(s+2)]/60 - Cal_Flats) + (Keck_Data[(s+3)]/60 - Cal_Flats))/4
+    Keck_DataABBA.append(image_dataSUB)
+    s += 4
+    Keck_Data_Total += Keck_DataABBA[n]
 #     filename = 'KeckDataABBASet' + str(n) + '.txt'
 #     np.savetxt(filename, Keck_DataABBA[n])
 

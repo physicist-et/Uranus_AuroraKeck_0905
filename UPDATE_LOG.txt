@@ -3,3 +3,8 @@ Editted Line 376 on KeckDatah3ppy_Unrough3 so that New_Temp's 0 values aren't co
 Editted Line 420 on KeckDatah3ppy_Unrough3 so that New_TE's 0 values aren't converted to np.nan (same as above)
 Added in the gaussstar.py file for the Reduction Script
 Editted Line 148 to 151 so that all pixels are considered when calculating the gaussian fit values for Intensities of Q1 and Q3
+
+18th January 2022
+Identified issue in comparible data use in KeckDatah3ppy_Unrough3 (compared to KeckIntensityStep4) (this will be addressed in tomorrow's update)
+Included Keck_Pixel_SelectionY for where MiddlePointData data files originates
+Ideas are to update names and comments once issue is resolved

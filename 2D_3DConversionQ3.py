@@ -8,7 +8,6 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 import csv
-from matplotlib.patches import Ellipse
 from KeckIntensityStep5 import New_INTSQ3
 
 #Testing script for how to get Uranus at Keck 2006 and IRTF 2016

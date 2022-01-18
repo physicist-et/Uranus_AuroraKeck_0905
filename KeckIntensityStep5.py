@@ -61,9 +61,9 @@ ABBAalpha = []
 for xx in range(54):
     ABBA = Keck_DataABBA[xx]*Fc_HD215*((4.2545*(10**10))/(0.288*0.1725))
     ABBAN = ABBA[int(Start_Points[i]):int(Finish_Points[i]), w1:w2] 
-    ABBAN = ABBAN*-1
+    ABBAN = ABBAN
     ABBAP = ABBA[int(Start_Points[i+1]):int(Finish_Points[i+1]), w1:w2] 
-    ABBAT = ABBAN+ABBAP
+    ABBAT = ABBAN-ABBAP
     ABBAalpha.append(ABBAT/2)
     i += 2
 
@@ -118,10 +118,10 @@ INTSQ1 = []
 INTSQ3 = []
 #from AvParams import AVALSAv
 iiii = 0
-for xx in range(54):
-    ABBAi = ABBAalpha[xx]
-    for i in range(22):
-        ABBAt = -1*ABBAi[i,:]
+for xx in range(1):
+    ABBAi = (ABBAalpha[xx*4] + ABBAalpha[(xx*4)+1] + ABBAalpha[(xx*4)+2] + ABBAalpha[(xx*4)+3])/4
+    for i in range(11):
+        ABBAt = (ABBAi[i*2,:] + ABBAi[(i*2)+1,:])/2
         gmodel = Model(gaussian_fit)
         A01 = np.nanmax(ABBAt[0:300])
         A03 = np.nanmax(ABBAt[650:750])
@@ -145,6 +145,9 @@ for xx in range(54):
         FWHM = pQ3.a2*5.856416015603827e-5*2*np.sqrt(2*math.log(2))
         FWHMQ3.append(FWHM)
         INTSQ3.append(pQ3.a0*FWHM)
+        plt.figure()
+        plt.plot(XX, ABBAt[0:300])
+        plt.plot(XX, resultQ1.best_fit)
         # if i == 11 and xx == 20:
         #     pass
             #plt.plot(np.arange(1024), ABBAt)

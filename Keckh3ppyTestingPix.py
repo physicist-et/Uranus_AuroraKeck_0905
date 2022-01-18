@@ -8,7 +8,7 @@ Created on Thu Jun 18 19:09:27 2020
 import matplotlib.pyplot as plt
 import numpy as np
 import h3ppy
-from Keck_Pixel_SelectionY import Keck_DataABBA
+from KeckIntensityStep2a import Keck_DataABBA
 from KeckDataReductionStep1 import Fc_HD215
 
 with open('MiddlePointData.csv', 'r') as file: #This reads in the file from 
