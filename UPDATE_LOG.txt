@@ -5,6 +5,14 @@ Added in the gaussstar.py file for the Reduction Script
 Editted Line 148 to 151 so that all pixels are considered when calculating the gaussian fit values for Intensities of Q1 and Q3
 
 18th January 2022
-Identified issue in comparible data use in KeckDatah3ppy_Unrough3 (compared to KeckIntensityStep4) (this will be addressed in tomorrow's update)
+Identified issue in comparible data use in KeckDatah3ppy_Unrough3 (compared to KeckIntensityStep5) (this will be addressed in tomorrow's update)
 Included Keck_Pixel_SelectionY for where MiddlePointData data files originates
 Ideas are to update names and comments once issue is resolved
+
+20th January 2022
+Issue resolved and method for Pixel selection from KeckIntensityStep5 has been used (which finds the longest line of pixels above or below 2stds from the mean)
+Deleted Keckh3ppyTestingPix script
+Renamed files dependant on which figure they assist and in what order they should be run in (this is also mentioned in the READ_ME text)
+
+21st January 2022
+Renamed multiple files for ease of understanding
